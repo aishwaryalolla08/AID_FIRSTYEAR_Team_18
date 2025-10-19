@@ -1,7 +1,7 @@
 from tkinter import *
 
 def convert():
-    try:  # handles if user types letters instead of numbers
+    try:  
         amount = float(entry_amount.get())
         currency = currency_var.get()
         if currency == "USD":
@@ -14,9 +14,9 @@ def convert():
             result = amount * 1.64
             label_result.config(text=result)
     except:
-        label_result.config(text="Enter a number!")  # no crashing
+        label_result.config(text="Enter a number!")  
 
-# GUI setup
+
 root = Tk()
 root.title("Currency Converter")
 
@@ -34,3 +34,4 @@ label_result = Label(root, text="")
 label_result.pack()
 
 root.mainloop()
+
